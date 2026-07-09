@@ -1,0 +1,619 @@
+﻿TS_PROFESSOR;;;;;;;
+;;;;;;;
+Variável;Tipo;Tamanho;Descrição;Código de Preenchimento;;;
+ID_SAEB;Num;4;Ano de aplicação do Saeb;2023;;;
+ID_REGIAO;Num;1;Código da Região;1 -  Norte;;;
+;;;;2 -  Nordeste;;;
+;;;;3 -  Sudeste;;;
+;;;;4 -  Sul;;;
+;;;;5 -  Centro-Oeste;;;
+ID_UF;Num;2;Código da Unidade da Federação;11 - RO;;;
+;;;;12 - AC;;;
+;;;;13 - AM;;;
+;;;;14 - RR;;;
+;;;;15 - PA;;;
+;;;;16 - AP;;;
+;;;;17 - TO;;;
+;;;;21 - MA;;;
+;;;;22 - PI;;;
+;;;;23 - CE;;;
+;;;;24 - RN;;;
+;;;;25 - PB;;;
+;;;;26 - PE;;;
+;;;;27 - AL;;;
+;;;;28 - SE;;;
+;;;;29 - BA;;;
+;;;;31 - MG;;;
+;;;;32 - ES;;;
+;;;;33 - RJ;;;
+;;;;35 - SP;;;
+;;;;41 - PR;;;
+;;;;42 - SC;;;
+;;;;43 - RS;;;
+;;;;50 - MS;;;
+;;;;51 - MT;;;
+;;;;52 - GO;;;
+;;;;53 - DF;;;
+ID_MUNICIPIO;Num;7;Máscaras dos Códigos de Municípios (são códigos fictícios);;;;
+ID_AREA;Num;1;Área;1 - Capital;;;
+;;;;2 - Interior;;;
+ID_ESCOLA;Num;8;Máscaras dos Códigos de Escola (são códigos fictícios);;;;
+IN_PUBLICA;Num;1;Indica se a escola é pública ou não;0 -  Privada;;;
+;;;;1 -  Pública;;;
+ID_LOCALIZACAO;Num;1;Localização;1 -  Urbana;;;
+;;;;2 -  Rural;;;
+ID_TURMA;Num;6;Código da turma no Saeb;;;;
+ID_PROFESSOR;Num;8;Código do Professor no Saeb;;;;
+ID_SERIE;Num;2;Ano Escolar;2 - 2º Ano do Ensino Fundamental;;;
+;;;;5 - 5º Ano do Ensino Fundamental;;;
+;;;;9 - 9º Ano do Ensino Fundamental;;;
+;;;;12 - 3ª/4ª séries do Ensino Médio Tradicional;;;
+;;;;13 - 3ª/4ª séries do Ensino Médio Integrado;;;
+SQ_QUESTIONARIO;CHAR;1;Sequencial do questionário na turma;0 - Turmas que não participaram da aplicação do questionário eletrônico ;;;
+;;;;5 - Professor único - 2º e 5º ano ;;;
+;;;;1 - Língua /Literatura Portuguesa ;;;
+;;;;2 - Matemática ;;;
+;;;;3 - Ciências Humanas ;;;
+;;;;4 - Ciências Da Natureza ;;;
+IN_PREENCHIMENTO_QUESTIONARIO;Num;1;Indicador de preenchimento do questionário;0 -  Não preenchido;;;
+;;;;1 - Preenchido parcial ou totalmente;;;
+IN_PREENCHIMENTO_OUTRA_TURMA;Num;1;Indicador de preenchimento do questionário para outra turma, pelo mesmo professor;0 - Não;;;
+;;;;1 - Sim;;;
+VARIÁVEL;TIPO;TAMANHO;GRUPO;DESCRICAO DO TEXTO DA PERGUNTA;REGRA;CODIGO DA OPCAO DE RESPOSTA;RESPOSTA
+TX_Q001;CHAR;1;INFORMAÇÕES GERAIS;Qual é o seu sexo?;;A;Masculino.
+;;;;;;B;Feminino.
+;;;;;;C;Não quero declarar.
+TX_Q002;NUM;2;INFORMAÇÕES GERAIS;Qual é a sua idade?;;slidebar;18-70
+TX_Q003;CHAR;1;INFORMAÇÕES GERAIS;Qual é a sua cor ou raça?;;A;Branca.
+;;;;;;B;Preta.
+;;;;;;C;Parda.
+;;;;;;D;Amarela.
+;;;;;;E; Indígena.
+;;;;;;F;Não quero declarar.
+TX_Q004;CHAR;1;INFORMAÇÕES GERAIS;Você possui deficiência, transtorno do espectro autista ou superdotação?;;A;Não
+;;;;;;B;Sim
+TX_Q005;CHAR;1;INFORMAÇÕES GERAIS;Indique qual é a sua condição:  Deficiência.;"Regra de dependência: se Q004=""B"", então abre o bloco (Q005 a Q007)";A;Não
+;;;;;;B;Sim
+TX_Q006;CHAR;1;INFORMAÇÕES GERAIS;Indique qual é a sua condição: Transtorno do espectro autista.;"Regra de dependência: se Q004=""B"", então abre o bloco (Q005 a Q007)";A;Não
+;;;;;;B;Sim
+TX_Q007;CHAR;1;INFORMAÇÕES GERAIS;Indique qual é a sua condição: Altas habilidades/superdotação.;"Regra de dependência: se Q004=""B"", então abre o bloco (Q005 a Q007)";A;Não
+;;;;;;B;Sim
+TX_Q008;CHAR;1;INFORMAÇÕES GERAIS;Leio livros não relacionados à Educação.;Neste ano, o que normalmente você tem feito quando está fora do(s) seu(s) local(is) de trabalho?;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q009;CHAR;1;INFORMAÇÕES GERAIS;Acesso blogs, Youtube, redes sociais (Twitter, Instagram, Facebook etc.).;Neste ano, o que normalmente você tem feito quando está fora do(s) seu(s) local(is) de trabalho?;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q010;CHAR;1;INFORMAÇÕES GERAIS;Assisto a filmes.;Neste ano, o que normalmente você tem feito quando está fora do(s) seu(s) local(is) de trabalho?;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q011;CHAR;1;INFORMAÇÕES GERAIS;Vou a exposições (museus, centros culturais).;Neste ano, o que normalmente você tem feito quando está fora do(s) seu(s) local(is) de trabalho?;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q012;CHAR;1;INFORMAÇÕES GERAIS;Assisto a espetáculos (teatro, shows, circo, etc);Neste ano, o que normalmente você tem feito quando está fora do(s) seu(s) local(is) de trabalho?;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q013;CHAR;1;INFORMAÇÕES GERAIS;Estudo.;Neste ano, o que normalmente você tem feito quando está fora do(s) seu(s) local(is) de trabalho?;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q014;CHAR;1;INFORMAÇÕES GERAIS;Assisto a telejornal.;Neste ano, o que normalmente você tem feito quando está fora do(s) seu(s) local(is) de trabalho?;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q015;CHAR;1;INFORMAÇÕES GERAIS;Tornar-me professor(a) foi a realização de um dos meus sonhos.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo o seu trabalho como professor(a) da Educação Básica?;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q016;CHAR;1;INFORMAÇÕES GERAIS;A profissão de professor(a) é valorizada pela sociedade.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo o seu trabalho como professor(a) da Educação Básica?;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q017;CHAR;1;INFORMAÇÕES GERAIS;As vantagens de ser professor(a) superam claramente as desvantagens.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo o seu trabalho como professor(a) da Educação Básica?;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q018;CHAR;1;INFORMAÇÕES GERAIS;No geral, estou satisfeito(a) com o meu trabalho de professor(a).;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo o seu trabalho como professor(a) da Educação Básica?;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q019;CHAR;1;INFORMAÇÕES GERAIS;Tenho vontade de desistir da profissão;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo o seu trabalho como professor(a) da Educação Básica?;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q020;CHAR;1;FORMAÇÃO ;Qual é o MAIS ALTO nível de escolaridade que você concluiu?;;A;Ensino Médio - Magistério.
+;;;;;;B;Graduação.
+;;;;;;C;Especialização.
+;;;;;;D;Mestrado.
+;;;;;;E;Doutorado.
+TX_Q021;CHAR;1;FORMAÇÃO;Atividades formativas com menos de 20 horas;Considerando a carga horária das atividades dormativas listadas abaixo, indique quantas você participou neste ano:;A;Nenhuma.
+;;;;;;B;Uma.
+;;;;;;C;Duas.
+;;;;;;D;Três ou mais.
+TX_Q022;CHAR;1;FORMAÇÃO;Curso com carga horária total de 20 horas até 179 horas.;Considerando a carga horária das atividades dormativas listadas abaixo, indique quantas você participou neste ano:;A;Nenhuma.
+;;;;;;B;Uma.
+;;;;;;C;Duas.
+;;;;;;D;Três ou mais.
+TX_Q023;CHAR;1;FORMAÇÃO;Curso com carga horária total com mais de 180 e menos 360 horas;Considerando a carga horária das atividades dormativas listadas abaixo, indique quantas você participou neste ano:;A;Nenhuma.
+;;;;;;B;Uma.
+;;;;;;C;Duas.
+;;;;;;D;Três ou mais.
+TX_Q024;CHAR;1;FORMAÇÃO;Considerando as atividades formativas de curta duração (inferiores a 360 horas) das quais participou neste ano, com que frequência estava previsto: Participação de professor(es) da(s) escola(s) em que leciono?;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q025;CHAR;1;FORMAÇÃO;Considerando as atividades formativas de curta duração (inferiores a 360 horas) das quais participou neste ano, com que frequência estava previsto: Atividades colaborativas de aprendizado?;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q026;CHAR;1;FORMAÇÃO;Considerando as atividades formativas de curta duração (inferiores a 360 horas) das quais participou neste ano, com que frequência estava previsto: Atividades intercaladas com seu trabalho normal de sala de aula?;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q027;CHAR;1;FORMAÇÃO;Indique o nível de contribuição das atividades formativas e cursos realizados neste ano para:  Aprofundar seus conhecimentos sobre as disciplinas que leciona.;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Não contribuiu
+;;;;;;B;Contribuiu pouco
+;;;;;;C;Contribuiu razoavelmente
+;;;;;;D;Contribuiu muito
+TX_Q028;CHAR;1;FORMAÇÃO;Indique o nível de contribuição das atividades formativas e cursos realizados neste ano para:  Aprimorar os processos avaliativos.;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Não contribuiu
+;;;;;;B;Contribuiu pouco
+;;;;;;C;Contribuiu razoavelmente
+;;;;;;D;Contribuiu muito
+TX_Q029;CHAR;1;FORMAÇÃO;Indique o nível de contribuição das atividades formativas e cursos realizados neste ano para:  Utilizar novas tecnologias para apoiar suas atividades.;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Não contribuiu
+;;;;;;B;Contribuiu pouco
+;;;;;;C;Contribuiu razoavelmente
+;;;;;;D;Contribuiu muito
+TX_Q030;CHAR;1;FORMAÇÃO;Indique o nível de contribuição das atividades formativas e cursos realizados neste ano para:  Colaborar com seus colegas na preparação de atividades e projetos.;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Não contribuiu
+;;;;;;B;Contribuiu pouco
+;;;;;;C;Contribuiu razoavelmente
+;;;;;;D;Contribuiu muito
+TX_Q031;CHAR;1;FORMAÇÃO;Indique o nível de contribuição das atividades formativas e cursos realizados neste ano para:  Aprimorar as metodologias de ensino.;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Não contribuiu
+;;;;;;B;Contribuiu pouco
+;;;;;;C;Contribuiu razoavelmente
+;;;;;;D;Contribuiu muito
+TX_Q032;CHAR;1;FORMAÇÃO;Indique o nível de contribuição das atividades formativas e cursos realizados neste ano para:  Auxiliar na mediação de conflitos.;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Não contribuiu
+;;;;;;B;Contribuiu pouco
+;;;;;;C;Contribuiu razoavelmente
+;;;;;;D;Contribuiu muito
+TX_Q033;CHAR;1;FORMAÇÃO;Dentre as atividades formativas listadas anteriormente das quais você participou neste ano, a instituição ou Secretaria de Educação financiou:;Regra de dependência: caso marque as alternativas Uma e/ou Duas e/ou Três ou mais no bloco de itens anterior (Q021,Q022 e Q023), abre os próximos três blocos (Q024 a Q033).;A;Todas as atividades formativas.
+;;;;;;B;Algumas atividades formativas (ou parte delas).
+;;;;;;C;Nenhuma atividade formativa.
+TX_Q034;CHAR;1;FORMAÇÃO;Durante este ano, indique se participou de algum dos cursos de pós-graduação listados abaixo:;;A;Não fiz curso de pós-graduação.
+;;;;;;B;Especialização (mínimo de 360 horas).
+;;;;;;C;Mestrado (acadêmico ou profissional).
+;;;;;;D;Doutorado.
+TX_Q035;CHAR;1;FORMAÇÃO;Recebeu apoio da Secretaria ou mantenedora para realizá-lo?;Regra de dependência: se Q034='B' e/ou Q034='C' e/ou Q034='D', abre os próximos dois itens (Q035 e Q036).;A;SEM apoio.
+;;;;;;B;Com apoio parcial.
+;;;;;;C;Com apoio total.
+TX_Q036;CHAR;1;FORMAÇÃO;Indique quem pagou por esse curso de pós-graduação:;Regra de dependência: se Q034='B' e/ou Q034='C' e/ou Q034='D', abre os próximos dois itens (Q035 e Q036).;A;Curso gratuito.
+;;;;;;B;Curso pago por algum órgão ou instituição (total ou parcialmente).
+;;;;;;C;Eu paguei integralmente o curso.
+TX_Q037;CHAR;1;FORMAÇÃO;Uso de novas tecnologias de informação e comunicação.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q038;CHAR;1;FORMAÇÃO;Gestão de conflitos.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q039;CHAR;1;FORMAÇÃO;Metodologia de avaliação.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q040;CHAR;1;FORMAÇÃO;Metodologia de ensino para o público-alvo da educação especial.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q041;CHAR;1;FORMAÇÃO;Utilização de elementos da cultura local na prática pedagógica.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q042;CHAR;1;FORMAÇÃO;Identificação de problemas extraescolares.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q043;CHAR;1;FORMAÇÃO;Gestão democrática.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q044;CHAR;1;FORMAÇÃO; Ensino do conteúdo que leciono.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q045;CHAR;1;FORMAÇÃO;Desenvolvimento da aprendizagem.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q046;CHAR;1;FORMAÇÃO;Planejamento pedagógico.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q047;CHAR;1;FORMAÇÃO;Recursos e práticas pedagógicas.;Para cada um dos temas relacionados abaixo, avalie o grau de necessidade de realização de atividades/cursos voltados para seu desenvolvimento profissional atualmente. ;A;Nenhuma necessidade
+;;;;;;B;Pouca necessidade
+;;;;;;C;Moderada necessidade
+;;;;;;D;Muita necessidade
+TX_Q048;NUM;2;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Há quantos anos você trabalha como professor(a)?;;slidebar;0-30
+TX_Q049;NUM;2;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Há quantos anos você trabalha como professor(a) nesta escola? ;;slidebar;0-30
+TX_Q050;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Além de ser professor(a), você exerce outra atividade remunerada?;;A;Não
+;;;;;;B;Sim
+TX_Q051;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Em quantas escolas você trabalha?;;A;Apenas nesta.
+;;;;;;B;Em 2.
+;;;;;;C;Em 3 ou mais.
+TX_Q052;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Qual o seu tipo de vínculo trabalhista nesta escola?;;A;Concursado/efetivo/estável.
+;;;;;;B;Contrato temporário.
+;;;;;;C;Contrato CLT.
+;;;;;;D;Outra situação trabalhista.
+TX_Q053;NUM;2;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Qual a sua carga horária semanal total de trabalho como professor(a)?;Some o número de horas por semana referentes a todas as jornadas que você assume atualmente como professor(a). ;slidebar;0-60
+TX_Q054;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Qual é o seu salário bruto como professor(a)? Indique a faixa salarial em que seu salário se encontra.;Considere como salário bruto os valores recebidos somente como professor(a) nas diversas escolas em que atua, sem descontos previdenciários ou de qualquer outra ordem, acrescido de eventuais gratificações. ;A;Até R$ 1.320,00.
+;;;;;;B;De R$ 1.320,01 até R$ 2.640,00.
+;;;;;;C;De R$ 2.640,01 até R$ 3.960,00.
+;;;;;;D;De R$ 3.960,01 até R$ 5.280,00.
+;;;;;;E;De R$ 5.280,01 até R$ 6.600,00.
+;;;;;;F;De R$ 6.600,01 até R$ 7.920,00.
+;;;;;;G;De R$ 7.920,01 até R$ 9.240,00.
+;;;;;;H;Acima de R$ 9.240,00.
+TX_Q055;NUM;2;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Nesta escola, quantas horas você trabalha em uma semana normal (desenvolvendo as atividades pedagógicas, presente em sala, preparando atividades, murais, participando de reuniões etc.)?;Para responder à próxima questão, considere que a semana normal de trabalho é aquela sem feriados, paralisações ou qualquer tipo de licença. Considere também as atividades que realizou durante as noites e no fim de semana.;slidebar;0-60
+TX_Q056;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Esta escola, em seu planejamento, prevê um tempo para atividades como preparação de aulas, reuniões, atendimento aos pais etc.?;;A;Não
+;;;;;;B;Sim
+TX_Q057;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Em uma semana normal de trabalho, você costuma levar trabalho desta escola para fazer em casa?;;A;Não
+;;;;;;B;Sim
+TX_Q058;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Tamanho da sala com relação ao número de estudantes.;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q059;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Acústica.;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q060;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Iluminação natural.;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q061;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Ventilação natural.;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q062;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Temperatura.;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q063;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Instalações elétricas.;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q064;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Limpeza.;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q065;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Acessibilidade física.;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q066;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Mobiliário (mesas, carteiras, armários).;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q067;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Infraestrutura (paredes, teto, assoalho, portas, piso).;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q068;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Lousa (quadro de giz ou quadro branco).;Tendo como referência uma sala de aula ideal, avalie as condições da(s) sala(s) de aula que você utiliza nesta escola com relação aos seguintes elementos:;A;Muito inadequado
+;;;;;;B;Inadequado
+;;;;;;C;Adequado
+;;;;;;D;Muito adequado
+TX_Q069;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Livro didático.;Indique os recursos que você normalmente usa nesta escola e qual a sua adequação para as atividades em sala de aula:;A;Não tem
+;;;;;;B;Não uso
+;;;;;;C;Muito inadequado
+;;;;;;D;Inadequado
+;;;;;;E;Adequado
+;;;;;;F;Muito adequado
+TX_Q070;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Televisão.;Indique os recursos que você normalmente usa nesta escola e qual a sua adequação para as atividades em sala de aula:;A;Não tem
+;;;;;;B;Não uso
+;;;;;;C;Muito inadequado
+;;;;;;D;Inadequado
+;;;;;;E;Adequado
+;;;;;;F;Muito adequado
+TX_Q071;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Projetor multimídia (datashow).;Indique os recursos que você normalmente usa nesta escola e qual a sua adequação para as atividades em sala de aula:;A;Não tem
+;;;;;;B;Não uso
+;;;;;;C;Muito inadequado
+;;;;;;D;Inadequado
+;;;;;;E;Adequado
+;;;;;;F;Muito adequado
+TX_Q072;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Computador (de mesa, portátil, tablet).;Indique os recursos que você normalmente usa nesta escola e qual a sua adequação para as atividades em sala de aula:;A;Não tem
+;;;;;;B;Não uso
+;;;;;;C;Muito inadequado
+;;;;;;D;Inadequado
+;;;;;;E;Adequado
+;;;;;;F;Muito adequado
+TX_Q073;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Software.;Indique os recursos que você normalmente usa nesta escola e qual a sua adequação para as atividades em sala de aula:;A;Não tem
+;;;;;;B;Não uso
+;;;;;;C;Muito inadequado
+;;;;;;D;Inadequado
+;;;;;;E;Adequado
+;;;;;;F;Muito adequado
+TX_Q074;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Internet.;Indique os recursos que você normalmente usa nesta escola e qual a sua adequação para as atividades em sala de aula:;A;Não tem
+;;;;;;B;Não uso
+;;;;;;C;Muito inadequado
+;;;;;;D;Inadequado
+;;;;;;E;Adequado
+;;;;;;F;Muito adequado
+TX_Q075;CHAR;1;EXPERIÊNCIA PROFISSIONAL E CONDIÇÕES DE TRABALHO;Recursos pedagógicos para atendimento educacional especializado.;Indique os recursos que você normalmente usa nesta escola e qual a sua adequação para as atividades em sala de aula:;A;Não tem
+;;;;;;B;Não uso
+;;;;;;C;Muito inadequado
+;;;;;;D;Inadequado
+;;;;;;E;Adequado
+;;;;;;F;Muito adequado
+TX_Q076;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Repetir de ano é bom para o(a) estudante que não apresentou desempenho satisfatório.;Indique o quanto você concorda ou discorda em relação aos seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q077;CHAR;1;PRÁTICAS PEDAGÓGICAS ;A quantidade de avaliações externas (municipais, estaduais ou federais) é excessiva.;Indique o quanto você concorda ou discorda em relação aos seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q078;CHAR;1;PRÁTICAS PEDAGÓGICAS ;As avaliações externas (municipais, estaduais ou federais) têm direcionado o que deve ser ensinado.;Indique o quanto você concorda ou discorda em relação aos seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q079;CHAR;1;PRÁTICAS PEDAGÓGICAS ;As avaliações externas têm ajudado a melhorar o processo de ensino e aprendizagem.;Indique o quanto você concorda ou discorda em relação aos seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q080;CHAR;1;PRÁTICAS PEDAGÓGICAS ;A maior parte dos estudantes apresentam problemas de aprendizagem.;Indique o quanto você concorda ou discorda em relação aos seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q081;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Propor dever de casa.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q082;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Corrigir com os(as) estudantes o dever de casa.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q083;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Desenvolver trabalhos em grupo com os(as) estudantes.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q084;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Solicitar que os(as) estudantes copiem textos e atividades do livro didático ou da lousa (quadro de giz ou quadro branco).;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q085;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Estimular os(as) estudantes a expressarem suas opiniões e a desenvolverem argumentos a partir de temas diversos.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q086;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Propor situações de aprendizagem que sejam familiares ou de interesse dos(as) estudantes.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q087;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Informar aos(às) estudantes, no início do ano, o que será  ensinado ou aprendido.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q088;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Perguntar aos(às) estudantes o que sabem sobre o tema, ao iniciar um novo conteúdo.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q089;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Trazer temas do cotidiano para serem debatidos em sala de aula.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q090;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Diversificar as metodologias de ensino conforme as dificuldades dos(as) estudantes.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q091;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Considerar que os resultados das avaliações indicam o quanto os(as) estudantes aprenderam.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q092;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Buscar estratégias para melhorar a aprendizagem dos(as) estudantes com menor desempenho.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q093;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Abordar questões sobre desigualdade racial com os(as) estudantes.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q094;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Abordar questões sobre desigualdade de gênero com os(as) estudantes.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q095;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Abordar questões sobre bullying e outras formas de violência com os(as)  estudantes.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q096;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Abordar questões relacionadas ao futuro profissional dos(as) estudantes.;Neste ano e nesta escola, indique a frequência com que você desenvolve as seguintes práticas pedagógicas:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q097;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Há estudantes público-alvo da educação especial nesta escola?;;A;Não
+;;;;;;B;Sim
+TX_Q098;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Indique com que frequência a escola oferece suporte para os estudantes público-alvo da educação especial.;Regra de dependência: se Q097='Sim', abrem os próximos 2 itens (Q098 e Q099).;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q099;CHAR;1;PRÁTICAS PEDAGÓGICAS ;Há um espaço para atendimento educacional especializado na escola?;Regra de dependência: se Q097='Sim', abrem os próximos 2 itens (Q098 e Q099).;A;Não
+;;;;;;B;Sim
+TX_Q100;CHAR;1;GESTÃO;A escola possui Projeto Político-Pedagógico? ;;A;Não
+;;;;;;B;Sim
+TX_Q101;CHAR;1;GESTÃO;Indique se as situações abaixo se aplicam ou não ao Projeto Político-Pedagógico desta escola. Seu conteúdo é discutido em reuniões?;Regra de dependência: se Q100='Sim', abre o próximo bloco sobre projeto pedagógico (Q101 a Q105).;A;Não
+;;;;;;B;Sim
+;;;;;;C;Não sei
+TX_Q102;CHAR;1;GESTÃO;Indique se as situações abaixo se aplicam ou não ao Projeto Político-Pedagógico desta escola. Os(As) professores(as) participaram da elaboração.;Regra de dependência: se Q100='Sim', abre o próximo bloco sobre projeto pedagógico (Q101 a Q105).;A;Não
+;;;;;;B;Sim
+;;;;;;C;Não sei
+TX_Q103;CHAR;1;GESTÃO;Indique se as situações abaixo se aplicam ou não ao Projeto Político-Pedagógico desta escola. Os profissionais não docentes participaram da elaboração?;Regra de dependência: se Q100='Sim', abre o próximo bloco sobre projeto pedagógico (Q101 a Q105).;A;Não
+;;;;;;B;Sim
+;;;;;;C;Não sei
+TX_Q104;CHAR;1;GESTÃO;Indique se as situações abaixo se aplicam ou não ao Projeto Político-Pedagógico desta escola. Os pais participaram da elaboração?;Regra de dependência: se Q100='Sim', abre o próximo bloco sobre projeto pedagógico (Q101 a Q105).;A;Não
+;;;;;;B;Sim
+;;;;;;C;Não sei
+TX_Q105;CHAR;1;GESTÃO;Indique se as situações abaixo se aplicam ou não ao Projeto Político-Pedagógico desta escola. Os(As) estudantes participaram da elaboração? ;Regra de dependência: se Q100='Sim', abre o próximo bloco sobre projeto pedagógico (Q101 a Q105).;A;Não
+;;;;;;B;Sim
+;;;;;;C;Não sei
+TX_Q106;CHAR;1;GESTÃO; Há Conselho de Classe na sua escola?;;A;Não
+;;;;;;B;Sim
+TX_Q107;NUM;2;GESTÃO;Quantas vezes o Conselho de Classe se reuniu neste ano?;"Regra de dependência: se Q106 =""Sim"", abrem os itens Q107 e Q108.";slidebar;0-12
+TX_Q108;NUM;3;GESTÃO;Quantos estudantes, NORMALMENTE, participam do Conselho de Classe por reunião?;"Regra de dependência: se Q106 =""Sim"", abrem os itens Q107 e Q108.";slidebar;0-100
+TX_Q109;CHAR;1;GESTÃO;Escolha do material didático.;Neste ano e para esta escola, qual dos atores listados abaixo foi o principal responsável pelas seguintes definições pedagógicas:;A;Docente da turma
+;;;;;;B;Todo o corpo docente da escola
+;;;;;;C;Equipe gestora
+;;;;;;D;Decisão externa à escola (Secretaria de Educação, sistema apostilado de ensino etc.).
+TX_Q110;CHAR;1;GESTÃO; Metodologia de ensino.;Neste ano e para esta escola, qual dos atores listados abaixo foi o principal responsável pelas seguintes definições pedagógicas:;A;Docente da turma
+;;;;;;B;Todo o corpo docente da escola
+;;;;;;C;Equipe gestora
+;;;;;;D;Decisão externa à escola (Secretaria de Educação, sistema apostilado de ensino etc.).
+TX_Q111;CHAR;1;GESTÃO;Conteúdos trabalhados em sala.;Neste ano e para esta escola, qual dos atores listados abaixo foi o principal responsável pelas seguintes definições pedagógicas:;A;Docente da turma
+;;;;;;B;Todo o corpo docente da escola
+;;;;;;C;Equipe gestora
+;;;;;;D;Decisão externa à escola (Secretaria de Educação, sistema apostilado de ensino etc.).
+TX_Q112;CHAR;1;GESTÃO;Instrumentos para avaliar os(as) estudantes.;Neste ano e para esta escola, qual dos atores listados abaixo foi o principal responsável pelas seguintes definições pedagógicas:;A;Docente da turma
+;;;;;;B;Todo o corpo docente da escola
+;;;;;;C;Equipe gestora
+;;;;;;D;Decisão externa à escola (Secretaria de Educação, sistema apostilado de ensino etc.).
+TX_Q113;CHAR;1;GESTÃO;Peso de cada instrumento de avaliação nas notas finais dos(as) estudantes.;Neste ano e para esta escola, qual dos atores listados abaixo foi o principal responsável pelas seguintes definições pedagógicas:;A;Docente da turma
+;;;;;;B;Todo o corpo docente da escola
+;;;;;;C;Equipe gestora
+;;;;;;D;Decisão externa à escola (Secretaria de Educação, sistema apostilado de ensino etc.).
+TX_Q114;CHAR;1;GESTÃO;Seleção de conteúdos usados nas provas.;Neste ano e para esta escola, qual dos atores listados abaixo foi o principal responsável pelas seguintes definições pedagógicas:;A;Docente da turma
+;;;;;;B;Todo o corpo docente da escola
+;;;;;;C;Equipe gestora
+;;;;;;D;Decisão externa à escola (Secretaria de Educação, sistema apostilado de ensino etc.).
+TX_Q115;CHAR;1;GESTÃO;O(A) diretor(a) debate as metas educacionais com os(as) professores(as) nas reuniões.;Neste ano, em relação a esta escola, indique o quanto você concorda ou discorda com os seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q116;CHAR;1;GESTÃO;O(A) diretor(a) e os(as) professores(as) tratam a qualidade de ensino como uma responsabilidade coletiva.;Neste ano, em relação a esta escola, indique o quanto você concorda ou discorda com os seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q117;CHAR;1;GESTÃO;O(A) diretor(a) informa aos(às) professores(as) sobre as possibilidades de aperfeiçoamento profissional.;Neste ano, em relação a esta escola, indique o quanto você concorda ou discorda com os seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q118;CHAR;1;GESTÃO;O(A) diretor(a) dá atenção especial a aspectos relacionados à aprendizagem dos(as) estudantes.;Neste ano, em relação a esta escola, indique o quanto você concorda ou discorda com os seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q119;CHAR;1;GESTÃO;O(A) diretor(a) dá atenção especial a aspectos relacionados às normas administrativas.;Neste ano, em relação a esta escola, indique o quanto você concorda ou discorda com os seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q120;CHAR;1;GESTÃO;O(A) diretor(a) me anima e me motiva para o trabalho.;Neste ano, em relação a esta escola, indique o quanto você concorda ou discorda com os seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q121;CHAR;1;GESTÃO;Tenho confiança no(a) diretor(a) como profissional.;Neste ano, em relação a esta escola, indique o quanto você concorda ou discorda com os seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q122;CHAR;1;GESTÃO;O(A) diretor(a) e os(as) professores(as) asseguram que as questões relacionadas à qualidade da convivência e gestão de conflitos sejam uma responsabilidade coletiva.;Neste ano, em relação a esta escola, indique o quanto você concorda ou discorda com os seguintes temas:;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q123;CHAR;1;GESTÃO;Colaboração da família para superar problemas relacionados aos estudantes (ausências, acompanhamento das atividades escolares etc.).;Nesta escola e neste ano, indique a frequência em que ocorreu:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q124;CHAR;1;GESTÃO;Colaboração entre colegas (feedback, trocas, projetos interdisciplinares).;Nesta escola e neste ano, indique a frequência em que ocorreu:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q125;CHAR;1;GESTÃO;Colaboração da gestão da instituição (equipe gestora, equipe pedagógica) para superar dificuldades de sala de aula.;Nesta escola e neste ano, indique a frequência em que ocorreu:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q126;CHAR;1;GESTÃO;Apoio da Secretaria de Educação para superar as dificuldades do cotidiano escolar.;Nesta escola e neste ano, indique a frequência em que ocorreu:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q127;CHAR;1;CLIMA ESCOLAR;Respeitam os acordos estabelecidos em sala.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo seus(suas) estudantes nesta escola.;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q128;CHAR;1;CLIMA ESCOLAR;São assíduos(as).;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo seus(suas) estudantes nesta escola.;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q129;CHAR;1;CLIMA ESCOLAR;São respeitosos(as) comigo.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo seus(suas) estudantes nesta escola.;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q130;CHAR;1;CLIMA ESCOLAR;São respeitosos(as) com os(as) colegas da turma.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo seus(suas) estudantes nesta escola.;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q131;CHAR;1;CLIMA ESCOLAR;Expressam diferentes opiniões.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo seus(suas) estudantes nesta escola.;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q132;CHAR;1;CLIMA ESCOLAR;Se interessam sobre o que ensinei neste ano.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo seus(suas) estudantes nesta escola.;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q133;CHAR;1;CLIMA ESCOLAR;Sentem-se motivados(as) para aprender os temas ligados à minha disciplina.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo seus(suas) estudantes nesta escola.;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q134;CHAR;1;CLIMA ESCOLAR;São capazes de concluir a Educação Básica e prosseguir seus estudos.;Indique o quanto você concorda ou discorda em relação aos seguintes temas envolvendo seus(suas) estudantes nesta escola.;A;Discordo fortemente
+;;;;;;B;Discordo
+;;;;;;C;Concordo
+;;;;;;D;Concordo fortemente
+TX_Q135;CHAR;1;CLIMA ESCOLAR;Atentado à vida.;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q136;CHAR;1;CLIMA ESCOLAR;Lesão corporal.;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q137;CHAR;1;CLIMA ESCOLAR;Roubo ou furto.;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q138;CHAR;1;CLIMA ESCOLAR;Tráfico de drogas.;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q139;CHAR;1;CLIMA ESCOLAR;Permanência de pessoas sob efeito de álcool.;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q140;CHAR;1;CLIMA ESCOLAR;Permanência de pessoas sob efeito de drogas.;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q141;CHAR;1;CLIMA ESCOLAR;Porte de arma (revólver, faca, canivete).;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q142;CHAR;1;CLIMA ESCOLAR;Assédio sexual.;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q143;CHAR;1;CLIMA ESCOLAR;Discriminação (racial, gênero, orientação sexual, econômica/social, deficiência etc.).;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q144;CHAR;1;CLIMA ESCOLAR;Bullying (ameaças ou ofensas verbais).;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q145;CHAR;1;CLIMA ESCOLAR;Invasão do espaço escolar.;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q146;CHAR;1;CLIMA ESCOLAR;Depredação do patrimônio escolar (vandalismo).;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q147;CHAR;1;CLIMA ESCOLAR;Tiroteio ou bala perdida.;Nesta escola, neste ano e com relação aos episódios listados abaixo, indique a frequência com que ocorreram:;A;Nunca
+;;;;;;B;Poucas vezes
+;;;;;;C;Muitas vezes
+;;;;;;D;Sempre
+TX_Q148;CHAR;3500;AVALIAÇÃO DO INSTRUMENTO;Sugestões de melhoria para o instrumento (inclusão de temas, estrutura do questionário etc.);;;RESPOSTA ABERTA
